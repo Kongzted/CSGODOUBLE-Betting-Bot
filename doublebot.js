@@ -34,7 +34,6 @@ mainLoop();
 
 function mainFunc(){
     updateValues();
-    getTotalEarnings();
     if (bannerDIV.innerHTML.indexOf('Rolling in ') == 0) {
         var timeString =  bannerDIV.innerHTML.substring(11,99);
         timeString = timeString.substring(0,timeString.length-3);
@@ -44,6 +43,7 @@ function mainFunc(){
         if (parseFloat(timeString) <= bettingTime){
             if (betted == false) {
                 bet();
+                getTotalEarnings();
             }
         }
     }
