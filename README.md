@@ -15,7 +15,8 @@ At the moment it will just follow the mass and goes for the color where most peo
 Open the console if you closed it and type:
 
 Amount of coins the bot should bet:
-'betAmount = 10;'
+`betAmount = 10;`
+
 
 
 To help me use this code to get free starting coins: 999GODOUBLECOINS 
