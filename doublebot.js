@@ -20,6 +20,7 @@ var refreshTime = 1000; // the time the loop waits until it refreshes
 var betAmount = 10; //amount of coins the bot bets
 
 var betted = false; //misc variable to avoid double bets
+var startingCoins = parseInt(balanceDIV.innerHTML);
 
 function mainLoop () { //recursive loop to call main func
     setTimeout(function () {
@@ -33,6 +34,7 @@ mainLoop();
 
 function mainFunc(){
     updateValues();
+    getTotalEarnings();
     if (bannerDIV.innerHTML.indexOf('Rolling in ') == 0) {
         var timeString =  bannerDIV.innerHTML.substring(11,99);
         timeString = timeString.substring(0,timeString.length-3);
@@ -71,4 +73,8 @@ function updateValues(){
     redTotal = parseInt(document.getElementsByClassName('pull-right total')[0].innerHTML);
     greenTotal = parseInt(document.getElementsByClassName('pull-right total')[1].innerHTML);
     blackTotal = parseInt(document.getElementsByClassName('pull-right total')[2].innerHTML);
+}
+
+function getTotalEarnings(){
+    console.log("Coins earned/lost: "+(parseInt(document.getElementById('balance') - startingCoins)));
 }
