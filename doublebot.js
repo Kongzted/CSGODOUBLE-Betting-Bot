@@ -76,5 +76,5 @@ function updateValues(){
 }
 
 function getTotalEarnings(){
-    console.log("Coins earned/lost: "+(parseInt(document.getElementById('balance') - startingCoins)));
+    console.log("Coins earned/lost: "+(parseInt(document.getElementById('balance').innerHTML - startingCoins)));
 }
