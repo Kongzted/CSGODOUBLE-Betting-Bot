@@ -32,7 +32,7 @@ function mainLoop () { //recursive loop to call main func
 mainLoop();
 
 function mainFunc(){
-
+    updateValues();
     if (bannerDIV.innerHTML.indexOf('Rolling in ') == 0) {
         var timeString =  bannerDIV.innerHTML.substring(11,99);
         timeString = timeString.substring(0,timeString.length-3);
@@ -65,4 +65,10 @@ console.log("Red:" + redTotal + " Green:" + greenTotal + " Black:" + blackTotal)
         console.log('Something is equal. WTF.')
     }
     betted = true;
+}
+
+function updateValues(){
+    redTotal = parseInt(document.getElementsByClassName('pull-right total')[0].innerHTML);
+    greenTotal = parseInt(document.getElementsByClassName('pull-right total')[1].innerHTML);
+    blackTotal = parseInt(document.getElementsByClassName('pull-right total')[2].innerHTML);
 }
