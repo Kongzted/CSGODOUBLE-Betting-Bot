@@ -15,12 +15,13 @@ var blackTotal = parseInt(document.getElementsByClassName('pull-right total')[2]
 
 var amountDIV = document.getElementById('betAmount');
 
-var bettingTime = 2;
-var refreshTime = 1000;
-var betAmount = 10;
-var betted = false;
+var bettingTime = 2; //the time it waits until it sets the bet
+var refreshTime = 1000; // the time the loop waits until it refreshes
+var betAmount = 10; //amount of coins the bot bets
 
-function mainLoop () {
+var betted = false; //misc variable to avoid double bets
+
+function mainLoop () { //recursive loop to call main func
     setTimeout(function () {
         mainFunc();
         mainLoop();
